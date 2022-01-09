@@ -20,10 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let verse1 = `${count} ${lines} of code in my file, ${count} ${lines} of cooode. `;
         let verse2 = 'Stand up and shout, "Comment one out!" ';
         let verse3 = `${count - 1} ${lines} of code in my file. `;
-        let verse4 = "No more lines of code in my file.";
+        let verse4 = "One more line of code in my file.";
+        let verse5 = "No more lines of code in my file.";
         let theSong = `${verse1}` + `${verse2}` + `${verse3}`;
-        if (count <= 0) {
+        if (count = 1) {
             theSong = `${verse4}`;
+        }
+         if (count == 0){
+            theSong = `${verse5}`;
         }
 
         button.addEventListener("click", function () {
