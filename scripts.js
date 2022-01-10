@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let verse3 = `${count - 1} ${lines} of code in my file. `;
         let verse4 = "One more line of code in my file.";
         let verse5 = "No more lines of code in my file.";
-        let theSong = `${verse1}` + `${verse2}` + `${verse3}`;
-        if (count = 1) {
+        let theSong = `${verse1}` + `${verse2}` + `${verse3}` + `${verse4}` + `${verse5}`;
+        if (count == 1) {
             theSong = `${verse4}`;
         }
          if (count == 0){
