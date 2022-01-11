@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     button.innerText = "Sing!";
     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
 
-    for (let count = 99; count > 0; count--) {
+    for (let count = 99; count > 1; count--) {
         if (count == 1) {
-            lines = "line";
+            theSong = "${verse4}";
         }
 
         else {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let verse3 = `${count - 1} ${lines} of code in my file. `;
         let verse4 = "One more line of code in my file.";
         let verse5 = "No more lines of code in my file.";
-        let theSong = `${verse1}` + `${verse2}` + `${verse3}` + `${verse4}` + `${verse5}`;
+        let theSong = `${verse1} ${verse2} ${verse3}`;
         if (count == 1) {
             theSong = `${verse4}`;
         }
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 h3.textContent = `${friendslist[i]}`;
                 h3.appendChild(para);
                 para.textContent = `${theSong}`;
-                
+
             };
             
         });
