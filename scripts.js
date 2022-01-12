@@ -11,23 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let count = 99; count > 1; count--) {
         if (count == 1) {
-            theSong = "${verse4}";
+            theSong = "${verse1}"; 
         }
 
         else {
             lines = "lines";
         }
-        let verse1 = `${count} ${lines} of code in my file, ${count} ${lines} of cooode. `;
-        let verse2 = 'Stand up and shout, "Comment one out!" ';
-        let verse3 = `${count - 1} ${lines} of code in my file. `;
-        let verse4 = "One more line of code in my file.";
-        let verse5 = "No more lines of code in my file.";
-        let theSong = `${verse1} ${verse2} ${verse3}`;
+        let theSong = `${count} ${lines} of code in my file
+         ${count} ${lines} of cooode. 
+      Stand up and shout, "Comment one out!" 
+       ${count - 1} ${lines} of code in my file.` 
+        let verse1 = "One more line of code in my file."
+        let verse2 = "No more lines of code in my file.";
+    
         if (count == 1) {
-            theSong = `${verse4}`;
+            theSong = `${verse1}`;
         }
          if (count == 0){
-            theSong = `${verse5}`;
+            theSong = `${verse2}`;
         }
 
         button.addEventListener("click", function () {
