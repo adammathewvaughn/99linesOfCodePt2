@@ -1,7 +1,7 @@
  document.addEventListener("DOMContentLoaded", function () {
      document.body.style.backgroundColor = "blanchedalmond";
      let div = document.createElement("div");
-     div.className = "friend";
+     div.className = "friendsdiv";
      let para = document.createElement("p");
      let h3 = document.createElement("h3");
      let button = document.createElement("button");
@@ -20,6 +20,7 @@
      button.addEventListener("click", function () {
              for (let i = 0; i < friendslist.length; i++) {
                  let div = document.createElement("div");
+                 div.className = "songdiv";
                  document.body.appendChild(div);
                  document.body.appendChild(para);
                  document.body.appendChild(h3);
