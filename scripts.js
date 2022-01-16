@@ -14,29 +14,26 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < friendslist.length; i++) {
             h3.textContent = friendslist[i];
             let div = document.createElement("div");
-            div.className = "songdiv";
-            document.body.appendChild(div);
-            document.body.appendChild(para);
-            document.body.appendChild(h3);
-            div.appendChild(para);
+            document.body.appendChild(div); //adds div to body     
+            document.body.appendChild(h3); //adds h3 to div
+            div.appendChild(para); //adds paragrapgh to div
             for (let count = 99; count > 1; count--) {
                 let theSong = `${count} ${lines} of code in my file \n
                  ${count} ${lines} of cooode.\n
                  Stand up and shout, "Comment one out!" \n
                  ${count - 1} ${lines} of code in my file.\n`;
                 para.innerText = theSong;
-                if (count == 1) {
-                    lines = "one more line";
+                if (count = 1) {
+                    lines = "line";
                 }
-                let verse2 = "No more lines of code in my file.";
                 if (count == 0) {
-                    theSong = `${verse2}`;
+                    theSong = `"No more lines of code in my file.";`;
                 }
 
                 else {
                     lines = "lines";
                 }
-            };
+            }; 
         };
     });
 });
