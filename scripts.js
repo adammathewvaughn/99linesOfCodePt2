@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.appendChild(div); //adds div to body     
             document.body.appendChild(h3); //adds h3 to div
             div.appendChild(para); //adds paragrapgh to div
-            for (let count = 99; count > 1; count--) {
+            for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
                 let theSong = `${count} ${lines} of code in my file \n
                  ${count} ${lines} of cooode.\n
                  Stand up and shout, "Comment one out!" \n

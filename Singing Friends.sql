@@ -17,4 +17,7 @@ INSERT     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",]INTO Frien
 ('Friend1',"Tom",  "1@test.com");
 ('Friend2', "Bill", "2@test.com");
 ('Friend3', "Harry", "3@test.com");
+
+  var query = `select * from FriendsTable where id in ("${list.join('", "')}")`;
+  console.log(query);
 select * from users;
