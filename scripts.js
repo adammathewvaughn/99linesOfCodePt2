@@ -11,34 +11,34 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(button);
     button.innerText = "Sing!";
     let lines = "lines";
-    let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
+     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
 
 
-    button.addEventListener("click", function () {
-    for (let i = 0; i < friendslist.length; i++) {
+     for (let i = 0; i < friendslist.length; i++) {
+        button.addEventListener("click", function () {
             h3.innerText = friendslist[i];
             document.body.appendChild(h3);
             document.body.appendChild(friendsdiv);
     
+            let theSong = `${count} ${lines} of code in my file 
+            ${count} ${lines} of cooode.
+            Stand up and shout, "Comment one out!"
+            ${count - 1} ${lines} of code in my file.`;
             for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
-                let theSong = `${count} ${lines} of code in my file \n
-                 ${count} ${lines} of cooode.\n
-                 Stand up and shout, "Comment one out!" \n
-                 ${count - 1} ${lines} of code in my file.\n`;
                 para.innerText = theSong;
                 if (count == 1) {
                     lines = "line";
                 }
+                else {
+                    lines = "lines";
                 if (count == 0) {
                     theSong = `"No more lines of code in my file.";`;
                 }
 
-                else {
-                    lines = "lines";
                 }
             }; 
-        };
         });
+        };
 });
 
 
@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 //    console.log(" 1 line of code in the file, 1 line of code;  "+ friends[i]+  " strikes one out, clears it all out, no more lines of code in the file.");            
 // }
+// }
 
 
 
@@ -71,5 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
     //              console.log (`${friendslist[i]} ${j} + line of code in the file, ${j} line of code. strikes one out, clears it all out, no more lines of code in the file.`);
     //      }
     //   }
- //  });
+ // });
 
