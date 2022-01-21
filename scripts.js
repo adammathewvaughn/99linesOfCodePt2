@@ -15,11 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
      for (let i = 0; i < friendslist.length; i++) {
+         
+         for (let count = 99; count > 1; count--) {
         button.addEventListener("click", function () {
             h3.innerText = friendslist[i];
             document.body.appendChild(h3);
             document.body.appendChild(friendsdiv);
-    
             let theSong = `${count} ${lines} of code in my file 
             ${count} ${lines} of cooode.
             Stand up and shout, "Comment one out!"
@@ -34,10 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (count == 0) {
                     theSong = `"No more lines of code in my file.";`;
                 }
-
+            
                 }
             }; 
+
         });
+    }
         };
 });
 
