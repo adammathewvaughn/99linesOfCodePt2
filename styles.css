@@ -17,6 +17,18 @@ body {
     z-index: 0;
 }
 
+.songdiv {
+    display: flex;
+    flex-direction: column;
+    background-color: #edd3f7;
+    padding: 10px;
+    border: 1px solid rgb(17, 0, 255);
+    border-radius: 40%;
+    width: 220px;
+    height: 220px;
+    float: right;
+}
+
 p {  
     display: flex;
     flex-direction: column;

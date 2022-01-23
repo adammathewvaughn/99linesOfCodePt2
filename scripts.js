@@ -7,36 +7,35 @@ document.addEventListener("DOMContentLoaded", function () {
     friendsdiv.className = "friendsdiv";
     let para = document.createElement("p");
     friendsdiv.appendChild(songdiv);   //adds paragraph to songdiv
-    friendsdiv.appendChild(para); //adds paragrapgh to div
+    songdiv.appendChild(para); //adds paragrapgh to div
     let h3 = document.createElement("h3");
      //adds h3 to body
     let button = document.createElement("button");
     document.body.appendChild(button);
     button.innerText = "Sing!";
     let lines = "lines";
-     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
-
-
-     for (let count = 99; count > 1; count--) {
-         for (let i = 0; i < friendslist.length; i++) {
-             button.addEventListener("click", function () {
-         h3.innerText = friendslist[i];
-         document.body.appendChild(h3);
-         document.body.appendChild(friendsdiv);
-         document.body.appendChild(songdiv);
-             let theSong = `${count} ${lines} of code in my file 
-             ${count} ${lines} of cooode.
-             Stand up and shout, "Comment one out!"
-             ${count - 1} ${lines} of code in my file.`;
-             for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
-                para.innerText = theSong;
+    let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
+    
+    for (let count = 99; count > 1; count--) {
+        for (let i = 0; i < friendslist.length; i++) {
+            button.addEventListener("click", function () {
+                h3.innerText = friendslist[i];
+                document.body.appendChild(h3);
+                document.body.appendChild(friendsdiv);
+                document.body.appendChild(songdiv);
+                let theSong = `${count} ${lines} of code in my file 
+                ${count} ${lines} of cooode.
+                Stand up and shout, "Comment one out!"
+                ${count - 1} ${lines} of code in my file.`;
+                for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
+             para.innerText = theSong;
                 if (count == 1) {
                     lines = "line";
                 }
                 else {
                     lines = "lines";
                 if (count == 0) {
-                    theSong = `"No more lines of code in my file.";`;
+                    theSong = `No more lines of code in my file.`;
                 }
             }
         };
