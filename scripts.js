@@ -16,20 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let lines = "lines";
     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
     
-    for (let count = 99; count > 1; count--) {
-        for (let i = 0; i < friendslist.length; i++) {
-            button.addEventListener("click", function () {
+    for (let i = 0; i < friendslist.length; i++) {
+    button.addEventListener("click", function () {
+    for (let count = 99; count < 1; count--) {
                 h3.innerText = friendslist[i];
                 document.body.appendChild(h3);
                 document.body.appendChild(friendsdiv);
-                document.body.appendChild(songdiv);
+                friendsdiv.appendChild(songdiv);
                 let theSong = `${count} ${lines} of code in my file 
                 ${count} ${lines} of cooode.
                 Stand up and shout, "Comment one out!"
                 ${count - 1} ${lines} of code in my file.`;
                 for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
              para.innerText = theSong;
-                if (count == 1) {
+                if (count = 1) {
                     lines = "line";
                 }
                 else {
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         };
-    });
     }
+});
 };
 });
 
