@@ -2,14 +2,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.body.style.backgroundColor = "blanchedalmond";
     let friendsdiv = document.createElement("div");
-    let songdiv = document.createElement("div");
-  //adds div to body     
+    let songdiv = document.createElement("div");  //     
     friendsdiv.className = "friendsdiv";
+    songdiv.className = "songdiv";
     let para = document.createElement("p");
-    friendsdiv.appendChild(songdiv);   //adds paragraph to songdiv
-    songdiv.appendChild(para); //adds paragrapgh to div
     let h3 = document.createElement("h3");
-     //adds h3 to body
     let button = document.createElement("button");
     document.body.appendChild(button);
     button.innerText = "Sing!";
@@ -17,30 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
     let friendslist = ["Tom", "John", "Bobby", "Tim", "Jimmy",];
     
     for (let i = 0; i < friendslist.length; i++) {
-    button.addEventListener("click", function () {
-    for (let count = 99; count < 1; count--) {
-                h3.innerText = friendslist[i];
-                document.body.appendChild(h3);
+            button.addEventListener("click", function () {
+            
+            for (let count = 99; count > 1; count--) {//counts down from 99 to 1 if count is greater than 1
+                
                 document.body.appendChild(friendsdiv);
+                friendsdiv.appendChild(h3);
+                h3.innerText = friendslist[i];
                 friendsdiv.appendChild(songdiv);
+                songdiv.appendChild(para);
                 let theSong = `${count} ${lines} of code in my file 
                 ${count} ${lines} of cooode.
                 Stand up and shout, "Comment one out!"
                 ${count - 1} ${lines} of code in my file.`;
-                for (let count = 99; count > 1; count--) { //counts down from 99 to 1 if count is greater than 1
-             para.innerText = theSong;
+                para.innerText = theSong;
                 if (count = 1) {
                     lines = "line";
                 }
                 else {
                     lines = "lines";
-                if (count == 0) {
+                if (count = 0) {
                     theSong = `No more lines of code in my file.`;
                 }
-            }
-        };
-    }
-});
+           }
+        }
+    });
 };
 });
 
